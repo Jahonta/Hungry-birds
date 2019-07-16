@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  cursor: url('bug.svg') -8 0, pointer;
+}
+
+body {
+  background-color: #e2f0dd;
+}
+
+h1 {
+  width: 100%;
+  margin: 2rem 0;
+  text-align: center;
+  color: #355534;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+  max-width: 23rem;
+  margin: 0 auto;
+  border: 0.3rem solid #355534;
+  padding: 1rem;
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 1rem;
+  background-color: #c1ecbf;
+  counter-reset: score;
+}
+
+main::after {
+  content: 'You fed ' counter(score) '/9 birds';
+  grid-column: 1/4;
+  margin-top: 1rem;
+  border-top: 0.1rem solid #355534;
+}
+
+input {
+  display: none;
+}
+
+div {
+  width: 6rem;
+  height: 6rem;
+  position: relative;
+  background: url('bird.svg') center no-repeat;
+}
+
+.nest {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  background: url('badbird.svg') center no-repeat;
+  animation: hungry 3s infinite forwards;
+}
+
+.nest-5 {
+  animation-delay: 0.5s;
+}
+
+.nest-1 {
+  animation-delay: 0.7s;
+}
+
+.nest-9 {
+  animation-delay: 1.2s;
+}
+
+.nest-2 {
+  animation-delay: 1.5s;
+}
+
+.nest-6 {
+  animation-delay: 1.7s;
+}
+
+.nest-8 {
+  animation-delay: 2.3s;
+}
+
+.nest-4 {
+  animation-delay: 2.5s;
+}
+
+.nest-7 {
+  animation-delay: 3s;
+}
+
+.nest-3 {
+  animation-delay: 3.1s;
+}
+
+input:checked + .nest {
+  background: url('goodbird.svg') center no-repeat;
+  transform: scale(1);
+  animation: score 0.1s 1 forwards, goodbird 2s 1 forwards;
+}
+
+@keyframes hungry {
+  0%,
+  30% {
+    transform: scale(1);
+  }
+  31% {
+    transform: scale(0);
+  }
+}
+
+@keyframes goodbird {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes score {
+  to {
+    counter-increment: score;
+  }
+}
