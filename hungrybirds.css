@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   cursor: pointer;
   cursor: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' %3E%3Cellipse rx='5' ry='7' cx='8' cy='8' fill='violet' stroke='black' stroke-width='1'/%3E%3Cellipse rx='4' ry='2' cx='8' cy='4' fill='gray' stroke='black' stroke-width='1'/%3E%3Cellipse rx='3' ry='1' cx='8' cy='2' fill='black'/%3E%3Cpolyline stroke='black' stroke-width='1' points='4,4 0,0'/%3E%3Cpolyline stroke='black' stroke-width='1' points='12,4 16,0'/%3E%3Cpolyline stroke='black' stroke-width='1' points='3,8 0,8'/%3E%3Cpolyline stroke='black' stroke-width='1' points='13,8 16,8'/%3E%3Cpolyline stroke='black' stroke-width='1' points='3,10 0,16'/%3E%3Cpolyline stroke='black' stroke-width='1' points='13,10 16,16'/%3E%3C/svg%3E") -8 0, pointer;
 }
@@ -11,23 +9,23 @@ body {
 }
 
 h1 {
-  width: 100%;
-  margin: 2rem 0;
+  font-size: 2rem;
+  margin: 2em 0;
   text-align: center;
   color: #355534;
   font-family: 'Arial Narrow', Arial, sans-serif;
 }
 
 main {
-  max-width: 23rem;
+  width: 23em;
   margin: 0 auto;
-  border: 0.3rem solid #355534;
-  padding: 1rem;
+  border: 0.3em solid #355534;
+  padding: 1em;
   display: grid;
   grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
-  grid-gap: 1rem;
+  grid-gap: 1em;
   background-color: #c1ecbf;
   counter-reset: score;
 }
@@ -35,8 +33,8 @@ main {
 main::after {
   content: 'You fed ' counter(score) '/9 birds';
   grid-column: 1/4;
-  margin-top: 1rem;
-  border-top: 0.1rem solid #355534;
+  margin-top: 1em;
+  border-top: 0.1em solid #355534;
 }
 
 input {
@@ -44,8 +42,8 @@ input {
 }
 
 div {
-  width: 6rem;
-  height: 6rem;
+  width: 6em;
+  height: 6em;
   position: relative;
   background: url("data:image/svg+xml,%3Csvg width='6rem' height='6rem' viewBox='0 0 150 150' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' %3E%3Cpolygon points='25,25 125,25 125,125 25,125' fill='%23666' /%3E%3Cpolygon points='75,0 150,75 75,150 0,75' fill='%23333' /%3E%3Cpolygon points='100,0 150,100 40,140 10,40' fill='%23ccc' /%3E%3Cpolygon points='50,10 140,50 100,140 10,100' fill='%23999' /%3E%3Ccircle cx='75' cy='90' fill='cornsilk' stroke='black' stroke-width='1' r='45'/%3E%3Ccircle cx='75' cy='55' fill='cornsilk' stroke='black' stroke-width='1' r='40'/%3E%3Ccircle cx='55' cy='50' fill='white' stroke='black' stroke-width='1' r='10'/%3E%3Ccircle cx='95' cy='50' fill='white' stroke='black' stroke-width='1' r='10'/%3E%3Ccircle cx='55' cy='50' fill='black' r='6'/%3E%3Ccircle cx='95' cy='50' fill='black' r='6'/%3E%3Cpolygon stroke='black' fill='khaki' stroke-width='1' points='65,70 75,60 85,70 75,110 65,70'/%3E%3C/svg%3E") center no-repeat;
 }
