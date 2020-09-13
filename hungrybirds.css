@@ -17,15 +17,15 @@ h1 {
 }
 
 main {
-  width: 23em;
-  margin: 0 auto;
-  border: 0.3em solid #355534;
-  padding: 1em;
   display: grid;
   grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
   grid-gap: 1em;
+  width: 23em;
+  margin: 0 auto;
+  border: 0.3em solid #355534;
+  padding: 1em;
   background-color: #c1ecbf;
   counter-reset: score;
 }
